@@ -13,89 +13,96 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Wayfinder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+        <a class="navbar-brand" href="data.html">Wayfinder</a>
+        Latitude
+    </a>
+    <div id="navbarNavDropdown" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item dropdown">
+                <a id="navbarDropdownMenuLink" class="nav-link dropdown-toggle" href="data.html" data-toggle="dropdown">
+                     Plots
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="viz_Temp.html">
+                         Max Temperature
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Weather Comparison</a>
-                        <a class="dropdown-item" href="#">Weather Data</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-
-        <!-- Our columns function in rows. -->
-        <div class="row">
-
-            <!-- Columns have 12 areas of width to work with. -->
-
-            <!-- One third of screen (4/12) -->
-            <div class="col-md-8">
-                Left Column
-                <div>
-                    <h2>"Weather Data Analysis"</h2>
-                    <p>"description text"</p>
-                    <img src="" alt="max temp">
+                    <a class="dropdown-item" href="viz_Humidity.html">
+                         Humidity
+                    </a>
+                    <a class="dropdown-item" href="viz_Clouds.html">
+                         Cloudiness
+                    </a>
+                    <a class="dropdown-item" href="viz_Wind.html">
+                         Wind Speed
+                    </a>
                 </div>
-                <!-- This is column 1 of 3 -->
-            </div>
-
-            <!-- One third of screen (4/12) -->
-            <div class="col-md-4">
-                Right column
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="C:\Users\ajker\Documents\DataScience\Homeworks\Web-Design-Challenge\Resources\Assets\Images\Max Temp"><img src="" alt="max temp"></a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="C:\Users\ajker\Documents\DataScience\Homeworks\Web-Design-Challenge\Resources\Assets\Images\Humidity#"><img src="" alt="humdity"></a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="C:\Users\ajker\Documents\DataScience\Homeworks\Web-Design-Challenge\Resources\Assets\Images\Cloudiness"><img src="" alt="cloudiness"></a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="C:\Users\ajker\Documents\DataScience\Homeworks\Web-Design-Challenge\Resources\Assets\Images\Wind Speed"><img src="" alt="wind speed"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- This is column 3 of 3 -->
-            </div>
-
-            <!-- Columns float left, so all adjacent rows will appear next to each other (as long as not all space gets taken up) -->
-        </div>
-
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comparisons.html">
+                     Comparison
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">
+                     Data
+                </a>
+            </li>
+        </ul>
     </div>
-    <footer>"copyright, etc."</footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+</nav>
+<!-- content -->
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-7">
+            <h1>
+                Summary: Latitude vs. X
+            </h1>
+            <br />
+            <img class="img-fluid float-left img-summary" style="width: 300px; height: auto;" src="assets/images/Max Temp.png" alt="Latitude v. Temperature" />
+            <br />
+            <br />
+            <p>
+                The purpose of this project was to analyze how weather changes as location changes in conjunction to the equator. To complete analysis, data from OpenWeatherMap API was pulled to create dataset including more than 500 cities.
+            </p>
+            <br />
+            <p>
+                Assembled data, used Matplotlip to plot weather v. latitude. Considerations for analysis inlcuded; temperature, cloudiness, humidity, and wind speed. The site provides the source data and visualizations created as part of the data analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+            </p>
+        </div>
+        <aside class="col-md-5 aside">
+            <br />
+            <h2>
+                Visualizations
+            </h2>
+            <br />
+            <div class="row">
+                <div class="col-sm-3 col-md-6">
+                    <a href="viz_Temp.html">
+                        <img class="img-fluid img-vis" style="width: 200px; height: auto;" src="Resources/Assets/Images/Max Temp.png" alt="Latitude v. Temperature" />
+                    </a>
+                </div>
+                <div class="col-sm-3 col-md-6">
+                    <a href="viz_Humidity.html">
+                        <img class="img-fluid img-vis" style="width: 200px; height: auto;" src="Resources/Assets/Images/Humidity.png" alt="Latitude v. Humidity" />
+                    </a>
+                </div>
+                <div class="col-sm-3 col-md-6">
+                    <a href="viz_Clouds.html">
+                        <img class="img-fluid img-vis" style="width: 200px; height: auto;" src="Resources/Assets/Images/Cloudiness.png" alt="Latitude v. Cloudiness" />
+                    </a>
+                </div>
+                <div class="col-sm-3 col-md-6">
+                    <a href="viz_Wind.html">
+                        <img class="img-fluid img-vis" style="width: 200px; height: auto;" src="Resources/Assets/Images/Wind Speed.png" alt="Latitude v. Windspeed" />
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
-</html>
